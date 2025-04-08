@@ -1,4 +1,4 @@
-import { Check, Info } from 'lucide-react';
+import { Armchair, Check, Info } from 'lucide-react';
 import { Link } from "react-router";
 
 const Navbar = () => {
@@ -20,7 +20,13 @@ const Navbar = () => {
                 </div>
             </div>
 
-            
+            <div className='navbar_middle flex items-center justify-center bg-[#f0f2f3] w-full h-[80px]'>
+                <div className='lg:container grid grid-cols-3 items-center'>
+                    <div className='logo-wrapper'>
+                        <Link to='/' className='text-3xl text-black font-medium capitalize flex items-center gap-2' ><Armchair size='2rem' color='#029fae'/>comforty</Link>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
