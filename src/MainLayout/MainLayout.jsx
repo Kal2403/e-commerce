@@ -1,9 +1,11 @@
-import React from 'react';
+import { BrowserRouter } from 'react-router';
 
 const MainLayout = () => {
-  return (
-    <div>Hello!</div>
-  )
+    return (
+        <BrowserRouter>
+            <Navbar />
+        </BrowserRouter>
+    )
 }
 
 export default MainLayout;
