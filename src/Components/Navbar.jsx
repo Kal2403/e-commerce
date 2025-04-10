@@ -76,6 +76,10 @@ const Navbar = () => {
                             <NavLink className='text-sm text-[#636270] font-medium capitalize'>about</NavLink>
                         </nav>
                     </div>
+
+                    <div className='navbar_bottom_right'>
+                        <p className='text-sm text-[#636270] font-normal capitalize'>contact: <span className='text-[#272343]'>(808)555-0111</span></p>
+                    </div>
                 </div>
             </div>
         </div>
