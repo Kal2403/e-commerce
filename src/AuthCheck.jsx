@@ -6,7 +6,11 @@ const AuthCheck = ({children}) => {
     const location = useLocation();
 
     if (!isAuthenticate) {
-        return null;
+        return <Navigate to='/auth/login' state={
+            {
+                from: location
+            }
+        } />
     }
 
     return children;
