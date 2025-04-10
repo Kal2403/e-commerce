@@ -1,4 +1,4 @@
-import { Armchair, Check, Info, Search } from 'lucide-react';
+import { Armchair, Check, Heart, Info, Search, ShoppingCart, User } from 'lucide-react';
 import { Link } from "react-router";
 
 const Navbar = () => {
@@ -23,15 +23,34 @@ const Navbar = () => {
             <div className='navbar_middle flex items-center justify-center bg-[#f0f2f3] w-full h-[80px]'>
                 <div className='lg:container grid grid-cols-3 items-center'>
                     <div className='logo-wrapper'>
-                        <Link to='/' className='text-3xl text-black font-medium capitalize flex items-center gap-2' ><Armchair size='2rem' color='#029fae'/>comforty</Link>
+                        <Link to='/' className='text-3xl text-black font-medium capitalize flex items-center gap-2' ><Armchair size='2rem' color='#029fae' />comforty</Link>
                     </div>
 
                     <div className='search-box'>
                         <form action="#" className='max-w-[443px] h-[44px] relative'>
-                            <input type="text" placeholder='Search here...' className='max-w-[443px] w-full h-full bg-white rounded-lg pl-4 text-black'/>
+                            <input type="text" placeholder='Search here...' className='max-w-[443px] w-full h-full bg-white rounded-lg pl-4 text-black' />
 
-                            <button className='absolute to-50% right-4 translate-y-1/2'><Search size='22px' color='#272343'/></button>
+                            <button className='absolute to-50% right-4 translate-y-1/2'><Search size='22px' color='#272343' /></button>
                         </form>
+                    </div>
+
+                    <div className='navbar_middle_right flex items-center gap-4'>
+
+                        <button className='btn capitalize'>
+                            <ShoppingCart /> cart <div className='badge badge-sm bg-[#029fae]'>2</div>
+                        </button>
+
+                        <button className='btn capitalize'>
+                            <Heart />
+                        </button>
+
+                        <div className='dropdown'>
+                            <div tabIndex={0} role='button' className='btn m-1'><User /></div>
+                            <ul tabIndex={0} className='dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>
+                                <li><a><Link>Account</Link></a></li>
+                                <li><a><Link>Logout</Link></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
