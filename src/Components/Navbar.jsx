@@ -1,5 +1,5 @@
-import { Armchair, Check, Heart, Info, Search, ShoppingCart, User } from 'lucide-react';
-import { Link } from "react-router";
+import { Armchair, Check, Heart, Info, Menu, Search, ShoppingCart, User } from 'lucide-react';
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
     return (
@@ -51,6 +51,30 @@ const Navbar = () => {
                                 <li><a><Link>Logout</Link></a></li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='navbar_bottom flex items-center justify-center w-full h-[75px] bg-white border-b-[1px] border-[#e1e3e5]'>
+                <div className='lg:container flex items-center justify-between'>
+                    <div className='navbar_bottom_left flex items-center gap-8'>
+                        <div className='dropdown dropdown-start'>
+                            <div tabIndex={0} role='button' className='btn m-1 flex items-center gap-5 capitalize'><Menu />all categories</div>
+                            <ul tabIndex={0} className='dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>
+                                <li><a>Chair</a></li>
+                                <li><a>Pant</a></li>
+                                <li><a>Shirt</a></li>
+                                <li><a>T-Shirt</a></li>
+                                <li><a>Pant</a></li>
+                            </ul>
+                        </div>
+                        <nav className='flex items-center gap-8'>
+                            <NavLink to='/' className='text-sm text-[#029fae] font-medium capitalize'>Home</NavLink>
+                            <NavLink className='text-sm text-[#636270] font-medium capitalize'>shop</NavLink>
+                            <NavLink className='text-sm text-[#636270] font-medium capitalize'>product</NavLink>
+                            <NavLink className='text-sm text-[#636270] font-medium capitalize'>pages</NavLink>
+                            <NavLink className='text-sm text-[#636270] font-medium capitalize'>about</NavLink>
+                        </nav>
                     </div>
                 </div>
             </div>
